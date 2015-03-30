@@ -1,0 +1,25 @@
+
+Waarom dit project
+- meer grip op video
+- kleine berekeningen als tijdsbalk + draggendroppen scrollbar
+- veel projecten bevatten video (campagnes, sites)
+- beter omgaan met OOP in JavaScript
+
+Wat moet er in zitten
+- knoppen play, pauze, tijdsbalk (ook te scrollen), fullscreen
+- tijdsbalk past zich aan aan de video
+- video's in de queue (wachtrij) kunnen plaatsen 
+(zoals bij de MP3 speler van de luisterpaal http3voor12.vpro.nlluisterpaal.html)
+
+Extra's leuk om uit te zoeken
+- Track element. Hiermee kun je o.a. subtitles en hoofdstukken toevoegen. 
+als je het koppelt met GPS dan kun je ook indrukwekkendere dingen doen als httpsimpl.infotrackmapindex.html
+- social sharing
+
+Voor meer info over HTML 5 video
+httpwww.html5rocks.comentutorialsvideobasics
+
+Dit soort video spelers wil je op verschillende sites kunnen gebruiken. 
+Probeer er voor te zorgen dat je de speler dus makkelijk in kunt stellen  stijlen.
+
+Je mag gebruik maken van de ViewController waar we laatst mee zijn gestart.
