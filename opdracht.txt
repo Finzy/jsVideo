@@ -17,7 +17,7 @@ als je het koppelt met GPS dan kun je ook indrukwekkendere dingen doen als https
 - social sharing
 
 Voor meer info over HTML 5 video
-httpwww.html5rocks.comentutorialsvideobasics
+http://www.html5rocks.com/en/tutorials/video/basics/
 
 Dit soort video spelers wil je op verschillende sites kunnen gebruiken. 
 Probeer er voor te zorgen dat je de speler dus makkelijk in kunt stellen  stijlen.
