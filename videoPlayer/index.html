@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>video player</title>
+</head>
+<body>
+	<div id="vidContainer">
+		<video id="vid" style="width:960px;height:540px;">
+			<source src="content/illya.mp4" />
+		</video>
+	</div>
+
+	<div id="vidControl">
+    	<button type="button" id="playPause">Play</button>
+    	<input type="range" id="progress" value="0">
+    	<button type="button" id="mute">Mute</button>
+    	<input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+    	<button type="button" id="fullScreen">Full-Screen</button>
+  	</div>
+  	<script src="js/controls.js"></script>
+  	<script src="js/script.js"></script>
+</body>
+</html>
