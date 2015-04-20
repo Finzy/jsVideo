@@ -38,6 +38,6 @@
 	padding-right: 5px;
 }
 
-::-webkit-media-controls {
+media-controls {
   display:none !important;
 }
