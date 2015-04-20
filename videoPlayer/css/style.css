@@ -10,7 +10,7 @@
 	position: relative;
 	background: #616161;
 	color: #fff;
-	padding: 5px 10px;	
+	padding: 5px 10px;
 	margin-top: 1px;
 	z-index: 2147483647;
 }
@@ -26,7 +26,7 @@
 
 #progress{
 	height: 100%;
-	width: 20%;
+	width: 0%;
 	background: #448AFF;
 }
 
