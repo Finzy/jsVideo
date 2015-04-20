@@ -3,12 +3,12 @@ var Controls = function(){
     //getting video
     this.vid = document.querySelector("#vid");
     //getting buttons
-    this.play = document.querySelector("#playPause");
-    this.mute = document.querySelector("#mute");
-    this.fullScreen = document.querySelector("#fullScreen");
+    this.play = document.querySelector(".playPause");
+    this.mute = document.querySelector(".mute");
+    this.fullScreen = document.querySelector(".fullScreen");
     //sliders
-    this.progress = document.querySelector("#progress");
-    this.volume = document.querySelector("#volume");
+    //getting the entire control panel
+    this.control = document.querySelector("#vidControl");
 
     self.playPause();
     self.muteControl();
@@ -25,27 +25,39 @@ Controls.prototype.playPause = function(){
     if (vid.paused == true) {
         //speelt de video af en verandered het woord naar Pause
         vid.play();
-        play.innerHTML = "Pause";
+        $(play).removeClass("fa-play").addClass("fa-pause");
     } else {
         //pauseerd de video en verandered het woord naar Play
         vid.pause();
-        play.innerHTML = "Play";
+        $(play).removeClass("fa-pause").addClass("fa-play");
+    }
+    });
+
+    vid.addEventListener("click", function() {
+    if (vid.paused == true) {
+        //speelt de video af en verandered het woord naar Pause
+        vid.play();
+        $(play).removeClass("fa-play").addClass("fa-pause");
+    } else {
+        //pauseerd de video en verandered het woord naar Play
+        vid.pause();
+        $(play).removeClass("fa-pause").addClass("fa-play");
     }
     });
 }
 
 Controls.prototype.muteControl = function(){
-  //alle dingen ophalen die je nodig hebt.
+    //alle dingen ophalen die je nodig hebt.
     var mute = this.mute;
     var vid = this.vid;
 
     mute.addEventListener("click", function() {
     if (vid.muted == false) {
         vid.muted = true;
-        mute.innerHTML = "Unmute";
+        $(mute).removeClass("fa-volume-up").addClass("fa-volume-off");
     } else {
         vid.muted = false;
-        mute.innerHTML = "Mute";
+        $(mute).removeClass("fa-volume-off").addClass("fa-volume-up");
     }
     });
 }
@@ -54,10 +66,12 @@ Controls.prototype.fullScreenControl = function(){
     //alle dingen ophalen die je nodig hebt.
     var fullScreen = this.fullScreen;
     var vid = this.vid;
+    var control = this.control;
 
     fullScreen.addEventListener("click", function() {
-        if (vid.requestFullscreen) {
+    if (vid.requestFullscreen) {
         vid.requestFullscreen();
+        player.style.zIndex = "2147483647";
     } else if (vid.mozRequestFullScreen) {
         vid.mozRequestFullScreen(); //firefox versie
     } else if (vid.webkitRequestFullscreen) {

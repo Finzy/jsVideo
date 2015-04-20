@@ -2,22 +2,28 @@
 <html>
 <head>
 	<title>video player</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="vidContainer">
-		<video id="vid" style="width:960px;height:540px;">
-			<source src="content/illya.mp4" />
+	<div id="player">
+		<video id="vid">
+		  <source src="content/illya.mp4" />
 		</video>
-	</div>
 
-	<div id="vidControl">
-    	<button type="button" id="playPause">Play</button>
-    	<input type="range" id="progress" value="0">
-    	<button type="button" id="mute">Mute</button>
-    	<input type="range" id="volume" min="0" max="1" step="0.1" value="1">
-    	<button type="button" id="fullScreen">Full-Screen</button>
-  	</div>
+
+	   <div id="vidControl">
+            <div id="timeLine">
+                <div id="progress"></div>
+            </div>
+            <i class="playPause fa fa-play icon"></i>
+            <i class="mute fa fa-volume-up icon"></i>
+            <i class="fullScreen fa fa-expand"></i>
+        </div>
+    </div>
   	<script src="js/controls.js"></script>
-  	<script src="js/script.js"></script>
+  	<script src="js/main.js"></script>
 </body>
 </html>
