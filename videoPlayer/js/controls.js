@@ -7,18 +7,20 @@ var Controls = function(){
     this.mute = document.querySelector(".mute");
     this.fullScreen = document.querySelector(".fullScreen");
     //sliders
+    this.timeBar = document.querySelector("#progress");
     //getting the entire control panel
     this.control = document.querySelector("#vidControl");
 
     self.playPause();
     self.muteControl();
+    self.progress();
     self.fullScreenControl();
 }
 
 Controls.prototype.playPause = function(){
     //alle dingen ophalen die je nodig hebt.
     var play = this.play;
-    var vid = this.vid; 
+    var vid = this.vid;
 
     //een functie maakt die activeert wanneer er op play word geklikt
     play.addEventListener("click", function() {
@@ -79,3 +81,12 @@ Controls.prototype.fullScreenControl = function(){
     }
     });
 }
+
+Controls.prototype.progress = function(){
+    var timeBar = this.timeBar;
+    var vid = this.vid;
+
+
+
+}
+
