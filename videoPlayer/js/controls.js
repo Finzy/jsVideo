@@ -83,10 +83,27 @@ Controls.prototype.fullScreenControl = function(){
 }
 
 Controls.prototype.progress = function(){
-    var timeBar = this.timeBar;
     var vid = this.vid;
 
+    $(document).ready(function(){
+        vid.addEventListener("timeupdate", function(event){
+            onTrackedVideoFrame(this.currentTime, this.duration);
+        });
+    });
 
+    function onTrackedVideoFrame(currentTime, duration){
+        var timeBar = $('#progress');
+        var timeC = $(".current");
+        var timeM = $(".duration")
 
+        var maxTime = Math.round(duration * 100) / 100;
+        var maxMin = Math.round(duration) / 60;
+        var current = Math.round(currentTime * 100) / 100;
+        var percent = 100 * current / maxTime;
+        timeBar.css('width', percent +'%');
+        console.log(maxMin);
+        timeC.text(current);
+        timeM.text(maxTime);
+    }
 }
 
